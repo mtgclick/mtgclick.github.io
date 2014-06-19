@@ -1,0 +1,21 @@
+doctype html
+html
+  title mtg-click
+  link(href='app.css', rel='stylesheet')
+body(ng-app="app")
+  .app(ng-controller="test as vm")
+    .header
+      .title mtg-click
+      .action(ng-click="vm.newGame()") New Game
+      .action(ng-click="vm.firstPlayer()") Pick First
+    .wrapper
+      .container(ng-repeat="player in vm.players")
+        .divider(ng-if="!$first")
+        .player(ng-class="[$first ? 'upsidedown' : '']")  
+          .life {{player.life}}
+          .name(ng-click="player.setName()") {{player.name}}
+          .actions 
+            button.do.add-life(ng-click="player.addLife()") + 
+            button.do.remove-life(ng-click="player.removeLife()") -
+  script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js')
+  script(type='text/javascript', src='app.js')
