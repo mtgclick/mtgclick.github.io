@@ -132,7 +132,7 @@ body {
 
 .do {
   width : 120px;
-  font-size : 32px;
+  font-size : 64px;
   border : 2px solid;
   border-radius : 8px;
 }
@@ -153,6 +153,10 @@ body {
     display : flex;
     flex-direction : row;
     justify-content : flex-start;
+  }
+
+  .actions {
+    width : 80%;
   }
   
   .title {
