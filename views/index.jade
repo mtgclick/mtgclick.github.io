@@ -10,12 +10,15 @@ body(ng-app="app")
       .action(ng-click="vm.firstPlayer()") Pick First
     .wrapper
       .container(ng-repeat="player in vm.players")
-        .divider(ng-if="!$first")
         .player(ng-class="[$first ? 'upsidedown' : '']")  
-          .life {{player.life}}
+          .life(ng-click="player.removeLife()")
+            span {{player.life}}
           .name(ng-click="player.setName()") {{player.name}}
           .actions 
             button.do.add-life(ng-click="player.addLife()") + 
             button.do.remove-life(ng-click="player.removeLife()") -
+    .footer
+      created by
+        a(href='twitter.com/msarchet') @msarchet
   script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js')
   script(type='text/javascript', src='app.js')

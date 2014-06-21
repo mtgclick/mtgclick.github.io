@@ -37,7 +37,7 @@ function player(name)  {
   
   this.setName = function() {
     var newName = prompt('Set players name');
-    if(newName != "") {
+    if(newName && newName != "") {
       self.name = newName;
     }
   }

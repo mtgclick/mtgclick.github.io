@@ -46,7 +46,7 @@ html {
   height : 100%;
 }
 body {
-  font-size : 8em;
+  font-size : 180px;
   font-family : Arial, Helvetica, "Segoe UI", sans-serif;
   color : white;
   background-color : #333;
@@ -58,32 +58,32 @@ body {
   width : 100%;
   display : flex;
   flex-direction : column;
+  justify-content : space-between;
 }
 
 .wrapper {
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  width : 100%;
+  flex-direction : column;
 }
 
 .player {
   display : flex;
   flex-direction : column;
   align-items : center;
+  width : 100%;
 }
 
 .upsidedown {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
-}
-
-.divider {
-  width : 100%;
-  background-color : black;
-  height : 20px;
-  content : ' ';
-  margin : 20px 0;
 }
 
 .header {
@@ -96,11 +96,24 @@ body {
   justify-content : flex-start;
 }
 
+.footer {
+  display : block;
+  float : left;
+  font-size : 11px;
+  color : #eee;
+}
+
 .title {
   margin-left : 80px;
   padding : 6px;
 }
 
+.actions {
+  width : 40%;
+  display : flex;
+  justify-content : space-between;
+  margin-top : 20px;
+}
 .action {
   font-size : 24px;
   margin-left: 20px;
@@ -113,13 +126,13 @@ body {
 }
 
 .name {
-  font-size: .33em;
+  font-size: 32px;
   cursor : pointer;
 }
 
 .do {
   width : 120px;
-  font-size : .33em;
+  font-size : 32px;
   border : 2px solid;
   border-radius : 8px;
 }
@@ -136,9 +149,6 @@ body {
 }
 
 @media(max-width : 800px) {
-  body {
-    font-size : 9em;
-  }
   .header {
     display : flex;
     flex-direction : row;
@@ -147,9 +157,5 @@ body {
   
   .title {
     margin-left : 0;
-  }
-  
-  .action {
-    margin : 20px;
   }
 }
