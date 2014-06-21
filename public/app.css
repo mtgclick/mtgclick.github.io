@@ -149,10 +149,21 @@ body {
 }
 
 @media(min-width : 1080px) {
-  html  {
-    font-size : 200%;
+  body {
+    font-size : 240px;
   }
 
+  .header {
+    font-size : 64px;
+  }
+
+  .do {
+    font-size : 64px;
+  }
+
+  .name {
+    font-size : 64px;
+  }
 }
 
 @media(max-width : 800px) {
